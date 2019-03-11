@@ -36,13 +36,13 @@ public class EmpDaoImpl implements IEmpDao {
             flag = true;
         }
         pstmt.close();
-        return true;
+        return flag;
     }
 
     @Override
     public List<Emp> findAll(String keyword) throws SQLException {
-        String sql = "select empno, ename, job, hiredate, sal from emp where ename like ? and job like ?";
-        conn.prepareStatement(sql);
+        String sql = "select empno, ename, job, hiredate, sal from emp where ename like ? or job like ?";
+        pstmt = conn.prepareStatement(sql);
         pstmt.setString(1, "%" + keyword + "%");
         pstmt.setString(2, "%" + keyword + "%");
         ResultSet rs = pstmt.executeQuery();

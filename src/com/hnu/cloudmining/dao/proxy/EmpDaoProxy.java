@@ -5,6 +5,7 @@ import com.hnu.cloudmining.dao.impl.EmpDaoImpl;
 import com.hnu.cloudmining.dbc.DatabaseConnection;
 import com.hnu.cloudmining.vo.Emp;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -15,7 +16,7 @@ public class EmpDaoProxy implements IEmpDao {
     private IEmpDao dao = null;
     private DatabaseConnection dbc = null;
 
-    public EmpDaoProxy() throws SQLException, ClassNotFoundException {
+    public EmpDaoProxy() throws SQLException, ClassNotFoundException, IOException {
         dbc = new DatabaseConnection();
         dao = new EmpDaoImpl(dbc.getConn());
     }
@@ -32,7 +33,7 @@ public class EmpDaoProxy implements IEmpDao {
         }finally {
             dbc.close();
         }
-        return false;
+        return flag;
     }
 
     @Override

@@ -1,6 +1,7 @@
 package com.hnu.cloudmining;
 import java.util.HashMap;
 import java.util.Map;
+// this file has bean save as "utf-8" encoding on the disk ,please reload it from disk by "utf-8"
 public class  Register{
 	private String name;
 	private String age;
