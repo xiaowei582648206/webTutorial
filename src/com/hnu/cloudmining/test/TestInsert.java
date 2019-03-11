@@ -23,7 +23,7 @@ public class TestInsert {
         // jsp接收request参数编码格式一定都要设置一致"utf-8"，否则就会出现中文乱码
         // 修改WEB-INF/classes/中的代码后一定要记得重启服务器
         //本java文件已经用utf-8的编码格式保存在磁盘上了，下次再打开功能，一定要记得使用utf-8格式从磁盘上reload
-        e.setEmpno(1092);
+        e.setEmpno(1019);
         e.setEname("小冰");
         e.setJob("策划部");
         e.setHiredate(date);
