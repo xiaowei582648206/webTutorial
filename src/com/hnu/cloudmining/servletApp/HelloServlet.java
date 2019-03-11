@@ -17,7 +17,7 @@ public class HelloServlet extends HttpServlet {
         writer.println("<html>");
         writer.println("<head><title> π”√javaServlet±‡–¥hellowrold≥Ã–Ú</title></head>");
         writer.println("<body>");
-        writer.println("<h1><font color=\"red\">hello world</font></h1>");
+        writer.println("<h1><font color=\"red\">hello world , this is my first servlet demo ! </font></h1>");
         writer.println("</body>");
         writer.println("</html>");
         writer.close();
