@@ -9,14 +9,17 @@ import java.io.PrintWriter;
 
 /**
  * Created by Administrator on 2019/3/11.
- * ÒÔºó·²ÊÇ³öÏÖÖĞÎÄµÄjavaÎÄ¼ş£¬Ò»ÂÉ²ÉÓÃutf-8±àÂë
+ * ä»¥åå‡¡æ˜¯å‡ºç°ä¸­æ–‡çš„javaæ–‡ä»¶ï¼Œä¸€å¾‹é‡‡ç”¨utf-8ç¼–ç ,è€Œä¸”ï¼Œrequestï¼Œresponse,javafileEncodingå…¨éƒ¨è®¾ç½®æˆç»Ÿä¸€çš„ç¼–ç æ ¼å¼
+ * requestï¼Œresponse,javafileEncoding must be same encoding with "utf-8"
  */
 public class HelloServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setCharacterEncoding("utf-8");
+        resp.setCharacterEncoding("utf-8");
         PrintWriter writer = resp.getWriter();
         writer.println("<html>");
-        writer.println("<head><title>Ê¹ÓÃjavaServlet±àĞ´hellowrold³ÌĞò</title></head>");
+        writer.println("<head><title>ä½¿ç”¨javaServletç¼–å†™hellowroldç¨‹åº</title></head>");
         writer.println("<body>");
         writer.println("<h1><font color=\"red\">hello world , this is my first servlet demo ! </font></h1>");
         writer.println("</body>");
