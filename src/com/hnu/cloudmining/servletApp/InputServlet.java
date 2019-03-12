@@ -20,6 +20,7 @@ public class InputServlet extends HttpServlet {
         req.setCharacterEncoding("utf-8");  // request 和 response 的字符格式一律设置成utf-8
         String info = req.getParameter("info");
         resp.setCharacterEncoding("utf-8");
+        //resp.setContentType("text/html;charset=utf-8");
         PrintWriter writer = resp.getWriter();
         writer.println("<html>");
         writer.println("<head><title>使用servlet接收前台页面提交的表单参数，并显示</title></head>");
