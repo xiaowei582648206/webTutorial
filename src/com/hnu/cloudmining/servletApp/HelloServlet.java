@@ -9,6 +9,7 @@ import java.io.PrintWriter;
 
 /**
  * Created by Administrator on 2019/3/11.
+ * 以后凡是出现中文的java文件，一律采用utf-8编码
  */
 public class HelloServlet extends HttpServlet {
     @Override
