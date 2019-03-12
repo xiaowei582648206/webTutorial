@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 /**
  * Created by Administrator on 2019/3/12.
  * 以后凡是出现中文的java文件，一律采用utf-8编码
- *only if the chainese character shows in the java file, the encoding of file must be "utf-8"
+ * only if the chainese character shows in the java file, the encoding of file must be "utf-8"
  */
 public class InputServlet extends HttpServlet {
     public InputServlet() {
