@@ -21,8 +21,10 @@ public class OnlineUserList implements HttpSessionAttributeListener,HttpSessionL
         String name = httpSessionBindingEvent.getName();
         String value = (String) httpSessionBindingEvent.getValue();
         System.out.println("============= attributeAdded ================"+name + " : "+value);
-        online_users.add(value);
-        this.app.setAttribute("online_users",online_users);
+        if("name".equals(name)){
+            online_users.add(value);
+            this.app.setAttribute("online_users",online_users);
+        }
     }
 
     @Override
@@ -30,7 +32,7 @@ public class OnlineUserList implements HttpSessionAttributeListener,HttpSessionL
         String name = httpSessionBindingEvent.getName();
         String value =(String) httpSessionBindingEvent.getValue();
         System.out.println("============= attributeRemoved ================"+name + " : "+value);
-        if(value!=null){
+        if(value!=null && "name".equals(name)){
             this.online_users.remove(value);
             this.app.setAttribute("online_users", online_users);
         }
